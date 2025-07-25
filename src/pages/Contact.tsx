@@ -245,6 +245,48 @@ const Contact = () => {
                       +91 9705707883
                     </a>
                   </div>
+                  <div className="mt-4 p-3 bg-secondary/20 rounded-lg">
+                    <p className="text-sm font-medium text-foreground">
+                      🎉 We also cater for functions.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-card-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4 flex items-center">
+                  <span className="mr-3">🛵</span>
+                  Order Online
+                </h3>
+                <div className="space-y-3">
+                  <Button 
+                    asChild 
+                    className="w-full bg-red-600 hover:bg-red-700 text-white"
+                  >
+                    <a 
+                      href="https://zomato.onelink.me/xqzv/xiaap9hc" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      🍽️ Order on Zomato
+                    </a>
+                  </Button>
+                  <Button 
+                    asChild 
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                  >
+                    <a 
+                      href="https://www.swiggy.com/menu/661672?source=sharing" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      🛵 Order on Swiggy
+                    </a>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
