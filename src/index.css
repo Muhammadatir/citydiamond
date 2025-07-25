@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hotel City Diamond Restaurant Design System
+All colors MUST be HSL for consistency */
+
+@layer base {
+  :root {
+    /* Restaurant color palette - warm, inviting colors */
+    --background: 30 20% 98%;
+    --foreground: 30 15% 15%;
+
+    --card: 30 15% 97%;
+    --card-foreground: 30 15% 15%;
+
+    --popover: 30 15% 97%;
+    --popover-foreground: 30 15% 15%;
+
+    /* Golden orange primary - main brand color */
+    --primary: 36 84% 50%;
+    --primary-foreground: 30 20% 98%;
+    --primary-glow: 36 90% 65%;
+
+    /* Warm cream secondary */
+    --secondary: 42 25% 88%;
+    --secondary-foreground: 30 15% 15%;
+
+    /* Subtle warm muted tones */
+    --muted: 42 20% 90%;
+    --muted-foreground: 30 10% 45%;
+
+    /* Accent deep orange */
+    --accent: 20 90% 55%;
+    --accent-foreground: 30 20% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 20% 98%;
+
+    --border: 42 15% 85%;
+    --input: 42 15% 85%;
+    --ring: 36 84% 50%;
+
+    /* Restaurant-specific design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(36, 84%, 50%), hsl(20, 90%, 55%));
+    --card-shadow: 0 4px 20px -4px hsl(36, 84%, 50%, 0.15);
+    --glow-shadow: 0 0 30px hsl(36, 90%, 65%, 0.3);
+    --warm-bg: linear-gradient(180deg, hsl(30, 20%, 98%), hsl(42, 25%, 96%));
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Dark mode restaurant-specific tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(36, 84%, 50%), hsl(20, 90%, 55%));
+    --card-shadow: 0 4px 20px -4px hsl(36, 84%, 50%, 0.25);
+    --glow-shadow: 0 0 30px hsl(36, 90%, 65%, 0.4);
+    --warm-bg: linear-gradient(180deg, hsl(222.2, 84%, 4.9%), hsl(217.2, 32.6%, 15%));
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Custom utility classes for restaurant design */
+@layer utilities {
+  .bg-warm-bg {
+    background: var(--warm-bg);
+  }
+  
+  .shadow-card-shadow {
+    box-shadow: var(--card-shadow);
+  }
+  
+  .shadow-glow-shadow {
+    box-shadow: var(--glow-shadow);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
