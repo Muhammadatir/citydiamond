@@ -183,16 +183,59 @@ const Menu = () => {
         </motion.div>
         </AnimatePresence>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="200">
-          <Card className="max-w-md mx-auto shadow-card-shadow">
+        {/* Order Options */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+          <Card className="shadow-card-shadow">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Ready to Order?</h3>
+              <h3 className="text-2xl font-bold mb-4 flex items-center">
+                <span className="mr-3">🛵</span>
+                Order Online
+              </h3>
+              <div className="space-y-3">
+                <Button 
+                  asChild 
+                  className="w-full bg-red-600 hover:bg-red-700 text-white"
+                >
+                  <a 
+                    href="https://zomato.onelink.me/xqzv/xiaap9hc" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    🍽️ Order on Zomato
+                  </a>
+                </Button>
+                <Button 
+                  asChild 
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                >
+                  <a 
+                    href="https://www.swiggy.com/menu/661672?source=sharing" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    🛵 Order on Swiggy
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+          
+          <Card className="shadow-card-shadow">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-4">Call to Order</h3>
               <p className="text-muted-foreground mb-6">
                 Contact us to place your order or make a reservation
               </p>
-              <Button size="lg" className="w-full">
-                Call Now: +91 9705707883
+              <Button 
+                asChild
+                size="lg" 
+                className="w-full"
+              >
+                <a href="tel:+919705707883">
+                  Call Now: +91 9705707883
+                </a>
               </Button>
             </CardContent>
           </Card>
